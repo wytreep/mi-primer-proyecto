@@ -99,7 +99,7 @@
         .footer
         {
             margin-top: 20px;
-            color: #bd4242;
+            color: #030303;
             font-size: 14px;
         }   @media(max-width:480px)
         {
@@ -109,4 +109,33 @@
                 height:72px;
                 font-size:20px
             }
+        }
+
+        /* Estilos para el botón de saludo */
+        #btn-saludo {
+            appearance: none;
+            -webkit-appearance: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            background: linear-gradient(135deg,#5aa6ff 0%, #2b8fff 100%);
+            color: white;
+            font-weight: 700;
+            border: 0;
+            box-shadow: 0 6px 18px rgba(43,143,255,0.18), inset 0 -2px 0 rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: transform .14s ease, box-shadow .14s ease, filter .14s ease;
+        }
+        #btn-saludo:active { transform: translateY(1px) scale(.995); }
+        #btn-saludo:hover { transform: translateY(-3px); filter: brightness(1.03); }
+        #btn-saludo:focus { outline: 3px solid rgba(90,166,255,0.18); outline-offset: 3px; }
+
+        /* Variante secundaria (por si la necesitas) */
+        #btn-saludo.secondary {
+            background: linear-gradient(135deg,#fff 0%, #f3f6ff 100%);
+            color: #1b2430;
+            border: 1px solid rgba(27,36,48,0.06);
+            box-shadow: 0 4px 12px rgba(18,20,34,0.04);
         }
