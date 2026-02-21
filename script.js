@@ -1,18 +1,23 @@
 console.log ("Hola, este es mi primer proyecto de desarrollo web. Estoy emocionado de compartirlo con ustedes. ¡Gracias por visitarlo!");
 
-// Seleccionar un elemento
+let indice = 0
+let nombres = ["HOLA, SOY EDWIN", "BIENVENIDO", "DESARROLLADOR WEB"]
+let intervalo = null
 
-function saludar() {
-    let titulo = document.querySelector("h1")
-
-// Cambiar su contenido
-titulo.textContent = "HOLA, SOY EDWIN A. CARABALI"
-
-// Cambiar su estilo
-titulo.style.color = "black"
-}
-// Escuchar un clic
 let boton = document.querySelector("button")
+let titulo = document.querySelector("h1")
+
 boton.addEventListener("click", function() {
-    saludar()
+    if (intervalo) {
+        clearInterval(intervalo)
+        intervalo = null
+        boton.textContent = "Saludarme"
+    } else {
+        intervalo = setInterval(function() {
+            titulo.textContent = nombres[indice]
+            titulo.style.color = "black"
+            indice = (indice + 1) % nombres.length
+        }, 1000)
+        boton.textContent = "Detener"
+    }
 })
