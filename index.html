@@ -4,24 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Presentación — Nombre Apellido</title>
-    <style>
-        body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;margin:0;background:#dce0e8;color:#111}
-        .container{max-width:800px;margin:6vh auto;background:#eedede;padding:28px;border-radius:10px;box-shadow:0 8px 30px rgba(18,20,34,0.08)}
-        .header{display:flex;gap:20px;align-items:center}
-        .avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#6b8cff,#487b9d);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px}
-        h1{margin:0;font-size:28px}
-        p.lead{margin:6px 0 0;color:#555}
-        .info{margin-top:18px;display:flex;gap:20px;flex-wrap:wrap}
-        .card{background:#cbddf8;padding:12px 14px;border-radius:8px}
-        .contact a{color:#1a73e8;text-decoration:none}
-        .footer{margin-top:20px;color:#666;font-size:14px}
-        @media(max-width:480px){.avatar{width:72px;height:72px;font-size:20px}}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="avatar">EC</div>
+           
             <div>
                 <h1>Edwin A. Carabali
                 </h1>
@@ -29,14 +17,14 @@
                 <p class="lead">Ubicación: Cali, Colombia                </p>
             </div>
         </div>
-        <section>
-    <h2>Mis habilidades</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Aprendiendo JavaScript</li>
-    </ul>
-</section>
+        <section class="skills">
+            <h2>Mis habilidades</h2>
+            <div class="skills-list">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Aprendiendo JavaScript</div>
+            </div>
+        </section>
 
         <div class="info">
             <div class="card">
